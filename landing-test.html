@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en" data-wf-page="66a7a63e1e34a58610234fea" data-wf-site="66a7a63e1e34a58610234fe4">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sajeer's Landing Design</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+
+    <style>
+      /* Chrome, Edge, Safari */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #0f0f0f; /* scrollbar background */
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #22d3ee; /* scrollbar color (teal/cyan example) */
+        border-radius: 10px;
+        border: 2px solid #0f0f0f;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #14b8a6; /* hover color */
+      }
+
+      /* Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #22d3ee #0f0f0f; /* thumb color | track color */
+      }
+    </style>
+    <style>
+      @keyframes fadeInUpWord {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .word {
+        display: inline-block;
+        position: relative;
+        opacity: 0;
+        animation: fadeInUpWord 0.5s ease forwards;
+        color: #fff !important;
+      }
+
+      /* Optional: Smooth fade-in for <p> and <button> */
+      .fade-target {
+        opacity: 0;
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        transform: translateY(20px);
+      }
+
+      .fade-in {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+
+      h2.animatedText span {
+        display: block;
+        background: linear-gradient(to right, #fff 50%, #5c5757 50%);
+        color: transparent;
+        background-size: 200% 100%;
+        background-position-x: 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+      @media (max-width: 1024px) {
+        h2.animatedText span {
+          display: inline;
+        }
+      }
+      #progress {
+        background: #4361ee;
+      }
+      #steps {
+        will-change: transform;
+        transform: translateZ(0);
+      }
+      @media (max-width: 992px) {
+        #steps {
+          margin-top: 50px !important;
+        }
+      }
+      #steps .step {
+        backface-visibility: hidden;
+      }
+    </style>
+    <style>
+      /* Owl Carousel Custom Styles */
+      .owl-carousel .owl-nav {
+        /* position: absolute; */
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+        pointer-events: none;
+      }
+
+      .owl-carousel .owl-nav button {
+        background: black !important;
+        border-radius: 50% !important;
+        width: 50px;
+        height: 50px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        pointer-events: all;
+        border: 1px solid #fff !important;
+        transition: all 0.3s ease;
+      }
+
+      .owl-carousel .owl-nav button:hover {
+        background: rgba(0, 0, 0, 0.8) !important;
+        transform: scale(1.1);
+      }
+
+      .owl-carousel .owl-nav button span {
+        display: none;
+      }
+
+      .owl-carousel .owl-dots {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .owl-carousel .owl-dots .owl-dot {
+        display: inline-block;
+        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .owl-carousel .owl-dots .owl-dot.active {
+        background: white;
+        transform: scale(1.2);
+      }
+
+      .owl-carousel .owl-dots .owl-dot span {
+        display: none;
+      }
+
+      /* Custom carousel styling */
+      .owl-carousel .item {
+        padding: 0 15px;
+      }
+
+      .mobile-slider .owl-dots .owl-dot {
+        display: none;
+        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .mobile-slider .owl-nav {
+        margin-top: 40px;
+      }
+    </style>
+    <style>
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+      .animate-scroll {
+        animation: scroll 40s linear infinite;
+      }
+
+      .border-gradient {
+        border-top: 1px solid transparent;
+        background-clip: padding-box;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+          linear-gradient(90deg, #002dff 0%, #7b7fffa6 10%, #002dff 100%);
+        background-origin: border-box;
+      }
+      .absolute-center {
+        /* Existing: horizontally center */
+        position: absolute;
+        left: 50%;
+        /* CHANGE: Stick the container to the bottom (100%) */
+        bottom: -15%;
+        /* CHANGE: Remove vertical center translation, keep horizontal */
+        transform: translate(-50%, 0);
+        width: 100vw;
+        /* Adjust height as needed, maybe to encompass the rings from the base up */
+        height: 100vh;
+        /* Optional: Hide overflow if rings go beyond bottom */
+        overflow: hidden;
+      }
+      @media (min-width: 1600px) {
+        .absolute-center {
+          bottom: -38% !important;
+        }
+      }
+      @keyframes ring-bounce {
+        0% {
+          opacity: 0;
+          transform: translate(-50%, 0)
+            translate3d(0, calc(var(--base, 0) * 1px + var(--amp, 70px) + 20px), 0) scale(1);
+        }
+        10% {
+          opacity: var(--opacity, 0.02);
+          transform: translate(-50%, 0)
+            translate3d(0, calc(var(--base, 0) * 1px + var(--amp, 70px)), 0) scale(1);
+        }
+        30% {
+          opacity: var(--opacity, 0.02);
+          transform: translate(-50%, 0)
+            translate3d(0, calc(var(--base, 0) * 1px - var(--amp, 40px)), 0)
+            scale(var(--scale-up, 1.05));
+        }
+        50% {
+          opacity: var(--opacity, 0.02);
+          transform: translate(-50%, 0)
+            translate3d(0, calc(var(--base, 0) * 1px - var(--amp, 40px)), 0)
+            scale(var(--scale-up, 1.05));
+        }
+        100% {
+          opacity: var(--opacity, 0.02);
+          transform: translate(-50%, 0) translate3d(0, calc(var(--base, 0) * 1px), 0) scale(1);
+        }
+      }
+
+      /*
+ ******************************************************
+ * 3. REVISED BASE STYLES: Set initial opacity to 0
+ ******************************************************
+ */
+      .ring {
+        position: absolute;
+        left: 50%;
+        aspect-ratio: var(--size, 1300) / calc(var(--size, 1300) * 0.44);
+        width: calc(var(--size, 1300) * 1px);
+        background-color: #002dff !important;
+        opacity: 0.5;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(138, 117, 117, 0) 0%,
+          var(--ring-color) 100%
+        );
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+
+        /* 🎨 THE FIX: Initial state must match the 0% keyframe (off-screen-bottom) */
+        opacity: 0; /* Ensures they are invisible before the animation starts */
+        filter: blur(0);
+        /* Match the 0% keyframe's transform for a smooth start:
+   translate(-50%, 0) + translate3d(0, calc(var(--base, 0) * 1px + var(--amp, 70px) + 20px), 0) */
+        transform: translate(-50%, 0)
+          translate3d(
+            0,
+            calc(var(--base, 0) * 1px + var(--amp, 70px) + 20px),
+            /* This is the key 🔑 */ 0
+          )
+          scale(1);
+        /* ---------------------------------------------------- */
+      }
+
+      /* Specific styling for the most prominent ring (innermost) - apply the same fix */
+      .ring-final {
+        /* CHANGE: Set the center ring to white */
+        background: white !important;
+        /* THE FIX: Initial state opacity is 0, now with the correct starting position */
+        opacity: 0;
+        filter: blur(0);
+        transform: translate(-50%, 0)
+          translate3d(0, calc(var(--base, 0) * 1px + var(--amp, 70px) + 20px), 0) scale(1);
+      }
+
+      /* The rest of the CSS remains the same */
+      .rings-loaded .ring {
+        animation: ring-bounce 1.5s cubic-bezier(0.4, 0.4, 0.4, 0.4) forwards;
+        animation-delay: var(--delay, 0ms);
+      }
+      #hero {
+        transition: transform 120ms linear, opacity 200ms ease;
+        will-change: transform, opacity;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="overflow-x-hidden lg:overflow-x-visible font-inter bg-[#0D0D0D]">
+    <section
+      id="hero-banner"
+      class="relative flex lg:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px]"
+    >
+      <!-- Content Container -->
+      <div class="container mx-auto w-full max-w-[1456px] px-4">
+        <span class="absolute bottom-[-20px] w-full left-0 z-[9] flex justify-center">
+          <img src="./img/glow.png" alt="" class="w-auto" />
+        </span>
+        <div class="w-full text-center pb-[40px] relative z-[9]">
+          <!-- H1 with word-by-word animation -->
+          <h1
+            id="animated-heading"
+            class="text-[42px] lg:text-[50px] font-bold lg:leading-[54px] leading-[60px] bg-gradient-to-b from-[#989AA4] from-[35.07%] to-[#F5FAFE] to-[75.35%] bg-clip-text text-transparent inline-block"
+          >
+            <span class="word" style="animation-delay: 0ms">Redefining</span>
+            <span class="word" style="animation-delay: 150ms">Your</span>
+            <span class="word" style="animation-delay: 300ms">Business</span>
+            <span class="word" style="animation-delay: 450ms">Success</span
+            ><br class="hidden lg:block" />
+            <span class="word" style="animation-delay: 600ms">With</span>
+            <span class="word" style="animation-delay: 750ms">Apps</span>
+            <span class="word" style="animation-delay: 900ms">&</span>
+            <span class="word" style="animation-delay: 1050ms">Software</span>
+            <span class="word" style="animation-delay: 1200ms">That</span>
+            <span class="word" style="animation-delay: 1350ms">Scale</span>
+          </h1>
+
+          <!-- Paragraph -->
+          <p
+            id="animated-paragraph"
+            class="fade-target text-white lg:text-[26px] text-[18px] mt-[20px]"
+          >
+            Award-Winning Digital Transformation Company with Strategic
+            <br class="hidden lg:block" />
+            Innovation Turning Brands into Industry Leaders
+          </p>
+
+          <!-- Button -->
+          <div id="animated-button" class="fade-target text-center flex justify-center mt-5">
+            <button
+              data-slot="button"
+              class="group relative inline-flex h-auto cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-[linear-gradient(180deg,#141B3B_50.68%,#D5DBFF_104.11%)] font-semibold whitespace-nowrap hover:scale-105 disabled:pointer-events-none lg:h-14 xl:h-16.25 group z-10 mt-8 lg:mt-10"
+            >
+              <span
+                class="bg-primary text-[16px] lg:text-[18px] flex h-full w-full items-center justify-center gap-2 overflow-hidden rounded-full px-[30px] py-[15px] leading-[1.38] text-white"
+              >
+                Get a Free Project Estimate
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  class="transition-transform duration-300 ease-in-out group-hover:rotate-45"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.5 8L6 18.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="square"
+                  ></path>
+                  <path
+                    d="M8 6.68793L17.2692 7.23081L17.812 16.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="square"
+                  ></path>
+                </svg>
+                <span
+                  class="pointer-events-none absolute -bottom-5 left-1/2 inline-block h-[30px] w-full -translate-x-1/2 bg-[radial-gradient(50%_50%_at_50%_50%,_#FFFFFF_0%,_#ff5a1463_100%)]"
+                ></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Radial Rings (Animated Glow Layers) -->
+      <div id="rings" class="absolute-center">
+        <span
+          class="ring"
+          style="
+            --base: 129.737;
+            --opacity: 0.02;
+            --delay: 2750ms;
+            --size: 1400;
+            --amp: 70px;
+            --scale-up: 1.05;
+          "
+        ></span>
+        <span
+          class="ring"
+          style="
+            --base: 208.114;
+            --opacity: 0.05;
+            --delay: 2600ms;
+            --size: 1100;
+            --amp: 60px;
+            --scale-up: 1.04;
+          "
+        ></span>
+        <span
+          class="ring"
+          style="
+            --base: 286.491;
+            --opacity: 0.05;
+            --delay: 1250ms;
+            --size: 900;
+            --amp: 50px;
+            --scale-up: 1.03;
+          "
+        ></span>
+        <span
+          class="ring"
+          style="
+            --base: 364.868;
+            --opacity: 0.1;
+            --delay: 800ms;
+            --size: 700;
+            --amp: 40px;
+            --scale-up: 1.02;
+          "
+        ></span>
+        <span
+          class="ring"
+          style="
+            --base: 443.246;
+            --opacity: 0.2;
+            --delay: 150ms;
+            --size: 500;
+            --amp: 30px;
+            --scale-up: 1.01;
+          "
+        ></span>
+        <span
+          class="ring ring-final"
+          style="
+            --base: 521.623;
+            --opacity: 1;
+            --delay: 0ms;
+            --size: 300;
+            --amp: 20px;
+            --scale-up: 1.005;
+          "
+        ></span>
+      </div>
+
+      <!-- Mobile radial rings (SVG fallback) -->
+      <div class="absolute left-0 bottom-[-20%] min-1680px:top-[38%] md:hidden block w-full">
+        <svg
+          width="100%"
+          height="601"
+          viewBox="0 0 390 601"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle opacity="0.02" cx="195" cy="650" r="650" fill="url(#paint1_radial)" />
+          <circle opacity="0.05" cx="195" cy="650" r="550" fill="url(#paint2_radial)" />
+          <circle opacity="0.05" cx="195" cy="650" r="450" fill="url(#paint3_radial)" />
+          <circle opacity="0.1" cx="195" cy="650" r="350" fill="url(#paint4_radial)" />
+          <circle opacity="0.2" cx="195" cy="650" r="250" fill="url(#paint5_radial)" />
+          <g filter="url(#filter0_d)">
+            <circle cx="195" cy="650" r="150" fill="#5871F0" />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d"
+              x="-38"
+              y="412"
+              width="466"
+              height="466"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feGaussianBlur stdDeviation="35" />
+            </filter>
+            <radialGradient
+              id="paint1_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(195 650) rotate(90) scale(650)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Awards Bar -->
+      <div
+        class="relative lg:absolute bottom-0 left-0 w-full bg-transparent py-4 xl:py-6 backdrop-blur-lg"
+      >
+        <div
+          class="container mx-auto w-full max-w-[1456px] px-4"
+          style="background-color: transparent"
+        >
+          <div
+            class="flex flex-col items-center justify-between gap-x-10 gap-y-4 xl:flex-row text-white xl:text-left text-center"
+          >
+            <p
+              class="w-full xl:max-w-[500px] leading-[1.38] text-[14px] lg:text-[16px] 2xl:text-[18px]"
+            >
+              Recognized for building the best solutions for startups, businesses, and enterprises
+            </p>
+            <div class="group flex w-full gap-x-4 overflow-hidden select-none xl:max-w-[829px]">
+              <ul
+                class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
+              >
+                <li><img src="./img/p1.png" alt="Deloitte" /></li>
+                <li><img src="./img/p2.png" alt="Inc 5000" /></li>
+                <li><img src="./img/p3.png" alt="USPAACC" /></li>
+                <li><img src="./img/p4.png" alt="NJBIZ" /></li>
+                <li><img src="./img/p5.png" alt="Fastest Growing" /></li>
+              </ul>
+              <ul
+                aria-hidden="true"
+                class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
+              >
+                <li><img src="./img/p1.png" alt="Deloitte" /></li>
+                <li><img src="./img/p2.png" alt="Inc 5000" /></li>
+                <li><img src="./img/p3.png" alt="USPAACC" /></li>
+                <li><img src="./img/p4.png" alt="NJBIZ" /></li>
+                <li><img src="./img/p5.png" alt="Fastest Growing" /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="overflow-hidden py-[50px] md:py-30 lg:py-40 xl:py-52.5 bg-[#0D0D0D]">
+      <div class="container mx-auto w-full max-w-[1456px] px-4">
+        <h2
+          class="animatedText mx-auto max-w-[940px] text-[clamp(28px,2.5vw,40px)] leading-[1.4] text-white text-center"
+        >
+          <span>As a Clutch 5-rated & #1 software development</span
+          ><span> company in the U.S., NewAgeSysIT believes in</span>
+          <span>crafting boundless solutions to build, design, and</span>
+          <span>scale AI, mobile, and web-based solutions that</span>
+          <span>drive business growth.</span>
+        </h2>
+      </div>
+    </section>
+
+    <section class="pt-[50px] pb-[50px] xl:py-20 bg-[#0D0D0D]">
+      <div class="container mx-auto w-full max-w-[1456px] px-4">
+        <h2
+          class="mb-5 overflow-hidden text-center text-[clamp(32px,3vw,50px)] leading-[1.2] font-semibold md:mb-10 xl:mb-20 text-white"
+          aria-label="Recognized For Excellence"
+        >
+          Recognized For Excellence
+        </h2>
+        <div class="hidden grid-cols-3 gap-8 xl:grid">
+          <div class="flex flex-col justify-center gap-8">
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="UpCity"
+                    loading="lazy"
+                    width="200"
+                    height="65"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/c1.png"
+                  />
+                  <p class="text-base text-white/60 xl:max-w-[256px]">
+                    Top-rated mobile app solution providers in New Jersey
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="Entrepreneur"
+                    loading="lazy"
+                    width="224"
+                    height="42"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/c2.png"
+                  />
+                  <p class="text-base text-white/60 xl:max-w-[256px]">
+                    App of the year – L-Card <br />
+                    Developed by NewAgeSysIT
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center gap-8">
+            <div class="min-h-[220px] h-full animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="Clutch"
+                    loading="lazy"
+                    width="130"
+                    height="37"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/c3.png"
+                  />
+                  <p class="text-base text-white/60 xl:max-w-[256px]">
+                    Top global leaders in mobile app development
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] h-full animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="BusinessofApps"
+                    loading="lazy"
+                    width="254"
+                    height="45"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/c4.png"
+                  />
+                  <p class="text-base text-white/60 xl:max-w-[256px]">iOS App Development</p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] h-full animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="GoodFirms"
+                    loading="lazy"
+                    width="216"
+                    height="30"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/c5.png"
+                  />
+                  <p class="text-base text-white/60 xl:max-w-[256px]">iOS App Development</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center gap-8">
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="DesignRush"
+                    loading="lazy"
+                    width="284"
+                    height="64"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/c4.png"
+                  />
+                  <p class="text-base text-white/60 xl:max-w-[256px]">
+                    Redefining service excellence
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="Clutch"
+                    loading="lazy"
+                    width="130"
+                    height="37"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/c2.png"
+                  />
+                  <p class="text-base text-white/60 xl:max-w-[256px]">iOS App Development</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:hidden">
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="UpCity"
+                  loading="lazy"
+                  width="200"
+                  height="65"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/c3.png"
+                />
+                <p class="text-base text-white/60 xl:max-w-[256px]">
+                  Top-rated mobile app solution providers in New Jersey
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="Entrepreneur"
+                  loading="lazy"
+                  width="224"
+                  height="42"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/c4.png"
+                />
+                <p class="text-base text-white/60 xl:max-w-[256px]">App of the year – L-Card</p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="Clutch"
+                  loading="lazy"
+                  width="130"
+                  height="37"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/c2.png"
+                />
+                <p class="text-base text-white/60 xl:max-w-[256px]">
+                  Top global leaders in mobile app development
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="BusinessofApps"
+                  loading="lazy"
+                  width="254"
+                  height="45"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/c1.png"
+                />
+                <p class="text-base text-white/60 xl:max-w-[256px]">iOS App Development</p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="GoodFirms"
+                  loading="lazy"
+                  width="216"
+                  height="30"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/c5.png"
+                />
+                <p class="text-base text-white/60 xl:max-w-[256px]">iOS App Development</p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <p class="text-base text-white/60 xl:max-w-[256px]">
+                  Redefining service excellence
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#020205] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="Clutch"
+                  loading="lazy"
+                  width="130"
+                  height="37"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/c1.png"
+                />
+                <p class="text-base text-white/60 xl:max-w-[256px]">iOS App Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const heading = document.getElementById("animated-heading");
+        const paragraph = document.getElementById("animated-paragraph");
+        const button = document.getElementById("animated-button");
+
+        const words = heading.querySelectorAll(".word");
+        const lastWord = words[words.length - 1];
+
+        lastWord.addEventListener("animationend", () => {
+          // Fade in paragraph
+          paragraph.classList.add("fade-in");
+
+          // Wait for paragraph animation (~600ms), then fade in button
+          setTimeout(() => {
+            button.classList.add("fade-in");
+          }, 600);
+        });
+      });
+    </script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+      const rings = gsap.utils.toArray("#rings .ring");
+      rings.forEach((ring) => {
+        const amp = parseFloat(ring.style.getPropertyValue("--amp")) || 100;
+        gsap.to(ring, {
+          "--offset": amp,
+          ease: "none",
+          scrollTrigger: {
+            trigger: "#hero-banner",
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("rings-loaded");
+      });
+      document.querySelectorAll(".animatedText").forEach((section) => {
+        const textEl = section.querySelectorAll("span");
+        gsap.to(textEl, {
+          scrollTrigger: {
+            trigger: textEl,
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: 1,
+          },
+          backgroundPositionX: "0%", // gradient sweep
+          stagger: 0.5,
+          ease: "none",
+        });
+      });
+    </script>
+    <script>
+      function createContinuousSwiper(selector, reverse = false) {
+        const swiper = new Swiper(selector, {
+          direction: "vertical",
+          loop: true,
+          slidesPerView: 2,
+          spaceBetween: 5,
+          allowTouchMove: false,
+          speed: 4000,
+          autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+            reverseDirection: reverse,
+          },
+          freeMode: true,
+          freeModeMomentum: false,
+
+          breakpoints: {
+            0: {
+              direction: "horizontal",
+              slidesPerView: 1.2,
+              spaceBetween: 10,
+            },
+            768: {
+              direction: "horizontal",
+              slidesPerView: 2.2,
+              spaceBetween: 10,
+            },
+            1024: {
+              direction: "vertical",
+              slidesPerView: 2,
+              spaceBetween: 5,
+            },
+          },
+        });
+
+        swiper.autoplay.start();
+        return swiper;
+      }
+
+      createContinuousSwiper(".swiper-up", false); // scroll upward
+      createContinuousSwiper(".swiper-down", true); // scroll downward
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        const $carousel = $(".owl-carousel");
+        console.log("Carousel elements found:", $carousel.length);
+
+        if ($carousel.length > 0) {
+          try {
+            $carousel.owlCarousel({
+              loop: true,
+              margin: 10,
+              nav: true,
+              dots: true,
+              autoplay: false,
+              items: 1,
+              responsive: {
+                0: {
+                  items: 1,
+                },
+                768: {
+                  items: 2,
+                },
+                1024: {
+                  items: 2,
+                },
+              },
+              onInitialized: function (event) {
+                console.log(
+                  "Owl Carousel initialized successfully with",
+                  event.item.count,
+                  "items"
+                );
+              },
+              onChanged: function (event) {
+                console.log("Slide changed to:", event.item.index);
+              },
+            });
+
+            console.log("Owl Carousel initialization attempted");
+          } catch (error) {
+            console.error("Error initializing Owl Carousel:", error);
+          }
+        } else {
+          console.error("No .owl-carousel elements found in the DOM");
+          console.log('Available elements with "owl" class:', $('[class*="owl"]').length);
+        }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Register the plugin: This is mandatory for using ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 2. Target all elements *except* the one that should be immediately visible
+        const elementsToAnimate = document.querySelectorAll(
+          ".animation-element:not(.initial-visible)"
+        );
+
+        // 3. Loop through each element and create a ScrollTrigger animation
+        elementsToAnimate.forEach((element) => {
+          gsap.from(element, {
+            // Initial state (where the animation *starts*)
+            y: 50, // Start 50 pixels lower (will slide up to its final position)
+            opacity: 0, // Start invisible
+            duration: 0.8, // Animation duration
+            ease: "power2.out",
+
+            // ScrollTrigger configuration: This section creates the individual trigger
+            scrollTrigger: {
+              trigger: element, // Use the current element in the loop as the trigger point
+              start: "top 95%", // Start the animation when the top of the element hits 95% down the viewport (near the bottom)
+              toggleActions: "play none none none", // Play the animation once when entering the view
+              // markers: true, // Uncomment this line to see the ScrollTrigger debugging lines
+            },
+          });
+        });
+
+        // 4. Optionally, animate the initial-visible element on page load (without scroll)
+        const initialElement = document.querySelector(".animation-element.initial-visible");
+        if (initialElement) {
+          gsap.from(initialElement, {
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            delay: 0.2, // A slight delay to ensure it feels intentional
+          });
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const rings = document.getElementById("rings");
+        if (!rings) return;
+
+        // A factor to control the sensitivity/intensity of the tilt.
+        const tiltSensitivity = 30;
+
+        // Get the window's dimensions for central reference
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        // *** Define the mandatory centering transform ***
+        const centeringTransform = "translate(-50%, 0)";
+
+        document.addEventListener("mousemove", (event) => {
+          const mouseX = event.clientX;
+          const mouseY = event.clientY;
+
+          const normalizedX = (mouseX - centerX) / centerX;
+          const normalizedY = (mouseY - centerY) / centerY;
+
+          // Rotation around X-axis (tilt up/down, controlled by Y-mouse position)
+          const rotX = normalizedY * -tiltSensitivity;
+          // Rotation around Y-axis (tilt left/right, controlled by X-mouse position)
+          const rotY = normalizedX * tiltSensitivity;
+
+          // 🌟 CRITICAL FIX: Combine centering with the new rotation 🌟
+          // Always include the centering transform first!
+          rings.style.transform = `${centeringTransform} rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+        });
+
+        // Optional: Reset the transform when the mouse leaves the window
+        document.addEventListener("mouseleave", () => {
+          // Reset to just the centering transform
+          rings.style.transform = centeringTransform;
+        });
+      });
+    </script>
+  </body>
+</html>
